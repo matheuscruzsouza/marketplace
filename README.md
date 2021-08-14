@@ -2,6 +2,8 @@
 
 ## Marketplace
 
+[![Deploy to gh-pages](https://github.com/matheuscruzsouza/marketplace/actions/workflows/main.yml/badge.svg)](https://github.com/matheuscruzsouza/marketplace/actions/workflows/main.yml)
+
 ## Technology
 
 Here are the technologies used in this project.
