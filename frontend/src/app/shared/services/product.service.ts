@@ -33,6 +33,10 @@ export class ProductService {
     Product.NULL,
     Product.NULL,
     Product.NULL,
+    Product.NULL,
+    Product.NULL,
+    Product.NULL,
+    Product.NULL,
   ];
 
   constructor() {}
