@@ -5,7 +5,7 @@ export class Product {
     public quantity: number = 0,
     public weight: string = "",
     public obs: string = "",
-    public image: string = "/assets/images/logo-icon-gray.png"
+    public image: string = "assets/images/logo-icon-gray.png"
   ) {}
 
   static NULL = new Product();
