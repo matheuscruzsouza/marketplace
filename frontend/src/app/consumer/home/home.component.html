@@ -1,0 +1,7 @@
+<app-card
+  fxLayout="row"
+  fxFlex="300px"
+  *ngFor="let produto of produtos"
+  [product]="produto"
+  (buy)="addToCart(produto, $event.quantidade)"
+></app-card>

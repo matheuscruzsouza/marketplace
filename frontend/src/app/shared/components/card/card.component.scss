@@ -1,0 +1,63 @@
+:host {
+  padding: 10px;
+
+  main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+
+    &.disabled {
+      filter: opacity(0.5);
+      z-index: -1;
+    }
+
+    img {
+      width: 33%;
+    }
+
+    aside {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+
+      .card-data {
+        width: 100%;
+      }
+    }
+  }
+
+  .detail-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 50;
+
+    .detail-container {
+      background-color: white;
+      border-radius: 15px;
+      height: 60%;
+      padding: 15px;
+      width: 70%;
+      z-index: 99;
+    }
+
+    .backdrop {
+      background-color: #00000080;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+}

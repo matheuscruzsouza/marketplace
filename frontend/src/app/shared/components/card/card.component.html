@@ -1,0 +1,26 @@
+<main
+  (click)="product.quantity > 0 && detail = !detail;"
+  [ngClass]="{'disabled': product.quantity == 0}"
+>
+  <img [src]="product.image" [alt]="product.name" />
+  <aside fxLayout="column">
+    <p>{{product.name}}</p>
+    <div fxLayout="row" fxLayoutAlign="center" class="card-data">
+      <p>{{product.value | currency: 'BRL'}}</p>
+    </div>
+  </aside>
+</main>
+
+<div *ngIf="detail" class="detail-wrapper">
+  <div class="detail-container" fxLayout="row">
+    <img [src]="product.image" [alt]="product.name" />
+    <aside fxLayout="column" fxLayoutAlign="center">
+      <p>{{product.name}}</p>
+      <div fxLayout="row" fxLayoutAlign="center" class="card-data">
+        <p>{{product.value | currency: 'BRL'}}</p>
+      </div>
+      <button (click)="onBuy()">Comprar</button>
+    </aside>
+  </div>
+  <div class="backdrop" (click)="detail = false;"></div>
+</div>
