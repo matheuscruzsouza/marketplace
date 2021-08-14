@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "buildProd": "ng build --prod --base-href=/marketplace/"
+    "buildProd": "ng build --base-href=/marketplace/"
   },
   "private": true,
   "dependencies": {
