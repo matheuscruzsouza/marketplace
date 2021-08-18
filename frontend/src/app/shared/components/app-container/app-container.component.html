@@ -10,9 +10,30 @@
       fxLayoutGap="10px"
       class="menu-container"
     >
-      <li>Products</li>
-      <li>Sign in</li>
-      <li>Login</li>
+      <li
+        class="link"
+        routerLink="/"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{exact: true}"
+      >
+        Products
+      </li>
+      <li
+        class="link"
+        routerLink="/signup"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{exact: true}"
+      >
+        Sign up
+      </li>
+      <li
+        class="link"
+        routerLink="/signin"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{exact: true}"
+      >
+        Sign in
+      </li>
     </ul>
   </nav>
 </header>

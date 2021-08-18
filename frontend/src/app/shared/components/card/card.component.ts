@@ -19,5 +19,6 @@ export class CardComponent implements OnInit {
 
   onBuy() {
     this.buy.emit({ quantidade: 2 });
+    this.detail = false;
   }
 }

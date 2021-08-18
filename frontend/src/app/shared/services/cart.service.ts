@@ -12,11 +12,11 @@ export class CartService {
   constructor() {}
 
   addProduct(item: Product, quantidade: number) {
-    this.CART.push(new CartItem(item, quantidade));
+    this.updateProduct(item, quantidade);
     return this.getCart();
   }
 
-  updateProduct(item: Product, quantidade: number) {
+  private updateProduct(item: Product, quantidade: number) {
     let exists = item.quantity <= 0;
 
     this.CART.forEach((obj, index, array) => {
@@ -27,7 +27,7 @@ export class CartService {
     });
 
     if (!exists) {
-      this.addProduct(item, quantidade);
+      this.CART.push(new CartItem(item, quantidade));
     }
 
     return this.getCart();

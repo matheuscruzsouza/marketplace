@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
   }
 
   addToCart(product: Product, quantidade: number) {
-    this.cartService.updateProduct(product, quantidade);
+    this.cartService.addProduct(product, quantidade);
     console.log(this.cartService.CART);
   }
 }
