@@ -38,8 +38,9 @@ Here will be the images and descriptions. Principal content.
 
 ## Links
 
-- Localhost API URL: [Swagger URL](http://localhost:8080/swagger-ui/index.html?url=/v3/api-docs&validatorUrl=#/)
-- Link of deployed application: (if has been deployed)
+<!-- - Localhost API URL: [Swagger URL](http://localhost:8080/swagger-ui/index.html?url=/v3/api-docs&validatorUrl=#/) -->
+
+- Link of deployed application: https://matheuscruzsouza.github.io/marketplace/
 - Repository: https://github.com/matheuscruzsouza/marketplace
   - In case of sensitive bugs like security vulnerabilities, please contact
     matheuscruzsouza@gmail.com directly instead of using issue tracker. We value your effort

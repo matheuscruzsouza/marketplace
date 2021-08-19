@@ -1,5 +1,5 @@
 import { Context } from "https://deno.land/x/oak@v9.0.0/mod.ts";
-import { verify } from "https://deno.land/x/djwt/mod.ts";
+import { verify } from "https://deno.land/x/djwt@v2.3/mod.ts";
 import { key } from "../environment.ts";
 
 const authMiddleware = async (ctx: Context, next: any) => {
