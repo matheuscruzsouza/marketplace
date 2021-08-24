@@ -2,9 +2,10 @@
 
 # Marketplace
 
+[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 [![Deploy to gh-pages](https://github.com/matheuscruzsouza/marketplace/actions/workflows/main.yml/badge.svg)](https://github.com/matheuscruzsouza/marketplace/actions/workflows/main.yml)
 
-This is a [WIP](https://dictionary.cambridge.org/pt/dicionario/ingles/wip) [POC](https://www.techopedia.com/definition/4066/proof-of-concept-poc) of a marketplace built on Angular and Deno.
+This is a [POC](https://www.techopedia.com/definition/4066/proof-of-concept-poc) of a marketplace built on Angular and Deno.
 
 ## Technology
 
