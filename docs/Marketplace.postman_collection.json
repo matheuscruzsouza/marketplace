@@ -6,7 +6,40 @@
 	},
 	"item": [
 		{
-			"name": "Auth",
+			"name": "Product",
+			"item": [
+				{
+					"name": "AllProducts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/cart",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cart"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
 			"request": {
 				"auth": {
 					"type": "bearer",
