@@ -1,11 +1,14 @@
 import { Context } from "https://deno.land/x/oak@v9.0.0/mod.ts";
 import {
   create,
+  decode,
   getNumericDate,
   Header,
   Payload,
 } from "https://deno.land/x/djwt@v2.3/mod.ts";
-import { users, key, User } from "../environment.ts";
+import { key } from "./auth.helper.ts";
+import { User } from "../src/model/user.ts";
+import UserService from "../src/service/user.service.ts";
 
 const jwtHeader: Header = {
   alg: "HS512",
@@ -14,6 +17,7 @@ const jwtHeader: Header = {
 
 const buildPayload = (user: User): Payload => {
   return {
+    id: user.id,
     iss: user.username,
     exp: getNumericDate(60 * 60),
   };
@@ -28,7 +32,7 @@ export const login = async (ctx: Context) => {
   const result = ctx.request.body({ type: "json" });
   const value = await result.value;
 
-  for (const user of users) {
+  for (const user of UserService.getUsers()) {
     if (value.username === user.username && value.password === user.password) {
       const jwt = await create(jwtHeader, buildPayload(user), key);
 
@@ -56,4 +60,19 @@ export const login = async (ctx: Context) => {
   };
 
   buildResponse(ctx, response, 422);
+};
+
+export const getContext = (ctx: Context) => {
+  const headers: Headers = ctx.request.headers;
+
+  const authorization = headers.get("Authorization");
+  const jwt = authorization?.split(" ")[1];
+
+  if (!jwt) {
+    return;
+  }
+
+  const [header, payload, signature] = decode(jwt);
+
+  return payload;
 };
